@@ -13,14 +13,12 @@ app.get('/products', async (req, res) => {
     const productos = await manager.getProducts()
     const prods = []
     let limit = parseInt(req.query.limit)
-    console.log(limit)
-    if(limit){
+    if(limit && limit <= productos.length){
         for (let i = 0; i < limit; i++){
             prods.push(productos[i])
         }
         return res.send(prods)
     }else {
-
         res.send({productos})
     }
 
