@@ -1,6 +1,6 @@
 import fs, { existsSync } from 'fs';
 
-export default class ProductManager {
+class ProductManager {
     
 constructor(path){
     this.path = path;
@@ -123,3 +123,5 @@ constructor(path){
 
     }
 }
+
+export default ProductManager

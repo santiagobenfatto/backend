@@ -26,7 +26,6 @@ app.get('/products', async (req, res) => {
 })
 
 
-
 app.get('/products/:pid', async (req, res) => {
     const productos = await manager.getProducts()
     let prodID = parseInt(req.params.pid)
