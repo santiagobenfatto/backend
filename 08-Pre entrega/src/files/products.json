@@ -1,0 +1,42 @@
+[
+	{
+		"title": "Hamburguesa",
+		"description": "Doble quesito",
+		"code": "543sdasdda",
+		"price": 2900,
+		"status": true,
+		"stock": 40,
+		"category": "Fast Fast Food",
+		"id": 1
+	},
+	{
+		"title": "Alitas de pollo",
+		"description": "15 piezas",
+		"code": "523a",
+		"price": 1500,
+		"status": true,
+		"stock": 15,
+		"category": "Fast Food",
+		"id": 2
+	},
+	{
+		"title": "Fried MAXI Chicken",
+		"description": "Extra extra large",
+		"code": "543sda",
+		"price": 3000,
+		"status": true,
+		"stock": 47,
+		"category": "Fast Food",
+		"id": 3
+	},
+	{
+		"title": "Nugget gigantes",
+		"description": "Extra extra large",
+		"code": "543sda",
+		"price": 3000,
+		"stock": 47,
+		"category": "Fast Food",
+		"status": true,
+		"id": 4
+	}
+]
