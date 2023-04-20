@@ -20,7 +20,7 @@
 		"id": 2
 	},
 	{
-		"title": "Fried MAXI Chicken",
+		"title": "Fried MINI Chicken",
 		"description": "Extra extra large",
 		"code": "543sda",
 		"price": 3000,
@@ -38,5 +38,25 @@
 		"category": "Fast Food",
 		"status": true,
 		"id": 4
+	},
+	{
+		"title": "Pancake",
+		"description": "Kids set",
+		"code": "547sass",
+		"price": 900,
+		"stock": 120,
+		"category": "Cakes",
+		"status": true,
+		"id": 5
+	},
+	{
+		"title": "Pancake big fest",
+		"description": "Adults set",
+		"code": "5478sdsd",
+		"price": 900,
+		"stock": 120,
+		"category": "Cakes",
+		"status": true,
+		"id": 6
 	}
 ]

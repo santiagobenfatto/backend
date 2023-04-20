@@ -1,47 +1,51 @@
 import Router from 'express';
 import ProductManager from '../managers/ProductManager.js';
 
-const router = Router()
 
+const router = Router()
 const productManager = new ProductManager ('./src/files/products.json')
 
 
 router.post('/', async (req,res) => {
+    const products = await productManager.getProducts()    
     const product = req.body
+
+    const foundCode = products.find(prod => prod.code === product.code)
+    if(foundCode){
+        return res.send({error:`product code ${product.code} already exists`})
+    }
 
     if (!product.status){
         product.status = true
     }
-    
     if(!product.title || !product.description || !product.code || !product.price || !product.category || !product.stock) {
         return res.status(400).send({error: 'incomplete values'})
     }
     const result = await productManager.addProduct(product)
     res.send({status:'success', result})
-
 })
 
 
 router.get('/', async (req, res) => {
-    const productos = await productManager.getProducts()
+    const products = await productManager.getProducts()
     const prods = []
     let limit = Number(req.query.limit)
-    if(limit && limit <= productos.length){
+    if(limit && limit <= products.length){
         for (let i = 0; i < limit; i++){
-            prods.push(productos[i])
+            prods.push(products[i])
         }
         return res.send({status: 'success', prods})
     }else {
-        res.send({status: 'success', productos})
+        res.send({status: 'success', products})
     }
 })
 
 
 router.get('/:pid', async (req, res) => {
     let prodID = Number(req.params.pid)
-    const producto = await productManager.getProductById(prodID)
-    if(!producto) return res.send({error:`El producto N° ${prodID} no existe`})
-    res.send({status: 'success', producto})
+    const prod = await productManager.getProductById(prodID)
+    if(!prod) return res.send({error:`El producto N° ${prodID} no existe`})
+    res.send({status: 'success', prod})
 })
 
 
@@ -66,7 +70,6 @@ router.delete('/:pid', async (req, res) => {
         await productManager.deleteProduct(pid)
         res.send({status: 'success', message: 'product deleted'})
     }
-
 })
 
 export default router

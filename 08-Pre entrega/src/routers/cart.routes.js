@@ -1,19 +1,16 @@
 import Router from 'express';
 import CartManager from '../managers/CartManager.js';
 import ProductManager from '../managers/ProductManager.js'
-const router = Router();
 
+const router = Router();
 const cartManager = new CartManager('./src/files/carts.json')
 const productManager = new ProductManager ('./src/files/products.json')
 
 
-//Nuevo carrito vacío
 router.post('/', async (req,res) => {
-
     const newCart = {
         products: []
     }
-
     const result = await cartManager.addCart(newCart)
     res.send({status: 'success', result})
 })
@@ -34,7 +31,6 @@ router.get('/:cid', async (req, res) => {
 
 
 router.post('/:cid/product/:pid', async (req,res) => {
-    
     const cid = Number(req.params.cid)
     const pid = Number(req.params.pid)
     
@@ -47,10 +43,8 @@ router.post('/:cid/product/:pid', async (req,res) => {
     if(cartIndex < 0 || prodIndex <0){
         return res.status(404).send({error:'Not found'})
     }
-    
     const result = await cartManager.addProductToCart(cid, pid)
     res.send({status:'success', result})
-    
 })
 
 

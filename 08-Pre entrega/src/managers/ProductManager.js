@@ -21,16 +21,10 @@ constructor(path){
 
 
     addProduct = async (producto) => {
-        
         try {
-
         const products = await this.getProducts()
-
-        
         const foundCode = products.find(prod => prod.code === producto.code)
-
         if(!foundCode){
-            
             if (products.length === 0){
                 producto.id = 1
             } else{
@@ -49,14 +43,10 @@ constructor(path){
     }
 
 
-      /* =====  getProductById(3) ==== */
-
     getProductById = async (productId) => {
         try {
             const products = await this.getProducts()
-
             const found = products.find( prodId => prodId.id === productId)
-            
             if(!found){
                 console.log(`Not Found`)
             } else {
@@ -66,7 +56,6 @@ constructor(path){
         } catch (error) {
             console.log(error)
         }
-
     }
 
     updateProduct = async (id, updates) => {
@@ -88,7 +77,6 @@ constructor(path){
     deleteProduct = async (id) => {
         try {
             let products = await this.getProducts()
-            
             const found = products.find((prod) => prod.id === id)
             const index = products.indexOf(found)
             if (found) {
