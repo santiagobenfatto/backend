@@ -1,0 +1,22 @@
+<div style="display:flex; gap: 5rem;">
+  <div>
+
+    <h1>Productos agregados</h1>
+    <div id="container">
+      {{#each products}}
+        <div>
+            <p>{{this.title}}</p>
+            <p>{{this.description}}</p>
+            <p>{{this.code}}</p>
+            <p>{{this.price}}</p>
+            <p>{{this.status}}</p>
+            <p>{{this.stock}}</p>
+            <p>{{this.category}}</p>
+            <p>{{this.id}}</p>
+        </div>
+        {{/each}}
+
+    </div>
+  </div>
+</div>
+<script src="/js/index.js"></script>

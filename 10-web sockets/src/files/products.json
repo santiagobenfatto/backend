@@ -1,0 +1,92 @@
+[
+	{
+		"title": "Hamburguesa",
+		"description": "Doble quesito",
+		"code": "543sdasdda",
+		"price": 2900,
+		"status": true,
+		"stock": 40,
+		"category": "Fast Fast Food",
+		"id": 1
+	},
+	{
+		"title": "Alitas de pollo",
+		"description": "15 piezas",
+		"code": "523a",
+		"price": 1500,
+		"status": true,
+		"stock": 15,
+		"category": "Fast Food",
+		"id": 2
+	},
+	{
+		"title": "Fried MINI Chicken",
+		"description": "Extra extra large",
+		"code": "543sda",
+		"price": 3000,
+		"status": true,
+		"stock": 47,
+		"category": "Fast Food",
+		"id": 3
+	},
+	{
+		"title": "Nugget gigantes",
+		"description": "Extra extra large",
+		"code": "543sda",
+		"price": 3000,
+		"stock": 47,
+		"category": "Fast Food",
+		"status": true,
+		"id": 4
+	},
+	{
+		"title": "Pancake",
+		"description": "Kids set",
+		"code": "547sass",
+		"price": 900,
+		"stock": 120,
+		"category": "Cakes",
+		"status": true,
+		"id": 5
+	},
+	{
+		"title": "Pancake big fest",
+		"description": "Adults set",
+		"code": "5478sdsd",
+		"price": 900,
+		"stock": 120,
+		"category": "Cakes",
+		"status": true,
+		"id": 6
+	},
+	{
+		"title": "Chocolate Cake",
+		"description": "Big One",
+		"code": "422s",
+		"price": 2700,
+		"stock": 10,
+		"category": "BIG-Cakes",
+		"status": true,
+		"id": 7
+	},
+	{
+		"title": "Carrot Cake",
+		"description": "The orange fest",
+		"code": "4s",
+		"price": 1700,
+		"stock": 17,
+		"category": "Cakes",
+		"status": true,
+		"id": 8
+	},
+	{
+		"title": "Mousse Cake",
+		"description": "The no fest",
+		"code": "477",
+		"price": 1700,
+		"stock": 17,
+		"category": "Cakes",
+		"status": true,
+		"id": 9
+	}
+]
