@@ -1,0 +1,24 @@
+<div style="display:flex; gap: 5rem;">
+  <div>
+    <h1>Productos</h1>
+    <div id="container">
+      {{#each products}}
+        <div>
+            <p> Producto:{{this.title}}</p>
+            <p>Descripción: {{this.description}}</p>
+            <p>Precio: {{this.price}}</p>
+            <p>Categoría: {{this.category}}</p>
+        </div>
+        {{/each}}
+
+        {{#if hasPrevPage}}
+          <a href="/products?page={{prevPage}}&limit=5"><button>Anterior</button></a>
+          {{/if}}
+
+          {{#if hasNextPage}}
+          <a href="/products?page={{nextPage}}&limit=5"><button>Siguiente</button></a>
+        {{/if}}
+    </div>
+  </div>
+</div>
+<script src="/js/index.js"></script>
