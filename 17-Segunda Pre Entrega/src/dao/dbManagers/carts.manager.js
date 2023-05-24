@@ -14,7 +14,7 @@ export default class CartsManager {
         const newCart = {
             products: [
                 {
-                    product: productId,
+                    product: _id,
                     quantity: 1
                 }
             ]
@@ -29,7 +29,10 @@ export default class CartsManager {
     }
 
     updateCart = async (id, cart) => {
-        const result = await cartModel.updateOne({ _id: id }, { $push: { cart: [...cart] } })
+        const result = await cartModel.updateOne(
+            { _id: id },
+            { $push: { products: { $each: products } } }
+          )
         return result
     }
 
