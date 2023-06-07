@@ -1,0 +1,16 @@
+<div style="display:flex; gap: 5rem;">
+  <div>
+    <h1>Carrito id: {{cart._id}}</h1>
+    <div id="container">
+      {{#each cart.products}}
+        <div style="border: 1px solid black">
+          <p>Producto: {{this.product.title}}</p>
+          <p>Descripción: {{this.product.description}}</p>
+          <p>Precio: {{this.product.price}}</p>
+          <p>Categoría: {{this.product.category}}</p>
+          <p>Cantidad: {{this.quantity}}</p>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</div>

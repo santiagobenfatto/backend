@@ -5,7 +5,7 @@ import viewsRouter from './views.routes.js'
 
 const router = express.Router()
 
-router.use('/products', viewsRouter)
+router.use('/', viewsRouter)
 router.use('/api/products', productsRouter)
 router.use('/api/carts', cartsRouter)
 
