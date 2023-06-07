@@ -6,8 +6,7 @@
 		"price": 2900,
 		"status": true,
 		"stock": 40,
-		"category": "Fast Fast Food",
-		"id": 1
+		"category": "Fastfood"
 	},
 	{
 		"title": "Alitas de pollo",
@@ -16,8 +15,7 @@
 		"price": 1500,
 		"status": true,
 		"stock": 15,
-		"category": "Fast Food",
-		"id": 2
+		"category": "Fastfood"
 	},
 	{
 		"title": "Fried MINI Chicken",
@@ -26,8 +24,7 @@
 		"price": 3000,
 		"status": true,
 		"stock": 47,
-		"category": "Fast Food",
-		"id": 3
+		"category": "Fastfood"
 	},
 	{
 		"title": "Nugget gigantes",
@@ -35,9 +32,8 @@
 		"code": "543sda",
 		"price": 3000,
 		"stock": 47,
-		"category": "Fast Food",
-		"status": true,
-		"id": 4
+		"category": "Fastfood",
+		"status": true
 	},
 	{
 		"title": "Pancake",
@@ -46,8 +42,7 @@
 		"price": 900,
 		"stock": 120,
 		"category": "Cakes",
-		"status": true,
-		"id": 5
+		"status": true
 	},
 	{
 		"title": "Pancake big fest",
@@ -56,7 +51,71 @@
 		"price": 900,
 		"stock": 120,
 		"category": "Cakes",
-		"status": true,
-		"id": 6
+		"status": true
+
+	},
+	{
+		"title": "Agua",
+		"description": "450ml",
+		"code": "5478fsdsd",
+		"price": 700,
+		"stock": 120,
+		"category": "Drinks",
+		"status": true
+	},
+	{
+		"title": "Cocacola",
+		"description": "450ml",
+		"code": "fds5t5w",
+		"price": 750,
+		"stock": 100,
+		"category": "Drinks",
+		"status": true
+	},
+	{
+		"title": "Gatorade",
+		"description": "1L",
+		"code": "fds5t5fdw",
+		"price": 1000,
+		"stock": 100,
+		"category": "Drinks",
+		"status": true
+	},
+	{
+		"title": "Jugo Naranja",
+		"description": "1L",
+		"code": "fdsfd35t5fdw",
+		"price": 900,
+		"stock": 100,
+		"category": "Drinks",
+		"status": true
+	},
+	{
+		"title": "Camarones",
+		"description": "A la provenzal",
+		"code": "fds45fdw",
+		"price": 6500,
+		"stock": 100,
+		"category": "Gourmet",
+		"status": true
+	},
+	{
+		"title": "Mollejas",
+		"description": "Al verdeo",
+		"code": "grd5t5fdw",
+		"price": 7000,
+		"stock": 100,
+		"category": "Gourmet",
+		"status": true
+	},
+	{
+		"title": "Cazuela de Mariscos",
+		"description": "Variada",
+		"code": "fd4t5fdw",
+		"price": 9900,
+		"stock": 100,
+		"category": "Gourmet",
+		"status": true
 	}
+
 ]

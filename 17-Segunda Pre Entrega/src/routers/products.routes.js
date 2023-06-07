@@ -27,19 +27,60 @@ router.post('/', async (req,res) => {
 })
 
 
+
 router.get('/', async (req, res) => {
-    const products = await productManager.getProducts()
-    const prods = []
-    let limit = Number(req.query.limit)
-    if(limit && limit <= products.length){
-        for (let i = 0; i < limit; i++){
-            prods.push(products[i])
+    try {
+      const products = await productManager.getProducts()
+      let limit = Number(req.query.limit)
+      let category = req.query.category
+      let sort = req.query.sort
+  
+      // Filtrar por categoría si se proporciona
+      if (category) {
+        products = products.filter(product => product.category === category)
+      }
+  
+      // Ordenar los productos
+      if (sort) {
+        if (sort === 'asc') {
+          products.sort((a, b) => a.price - b.price)
+        } else if (sort === 'desc') {
+          products.sort((a, b) => b.price - a.price)
         }
-        return res.send({status: 'success', prods})
-    }else {
-        res.send({status: 'success', products})
+      }
+
+      //Limite
+      if (limit && limit <= products.length) {
+        products.splice(limit)
+      }
+  
+      // Paginación
+      let page = Number(req.query.page) || 1
+      let pageSize = Number(req.query.pageSize) || 10
+      let totalPages = Math.ceil(products.length / pageSize)
+      let startIndex = (page - 1) * pageSize
+      let endIndex = startIndex + pageSize
+      let prods = products.slice(startIndex, endIndex)
+  
+      // Construir el objeto de respuesta
+      let response = {
+        status: 'success',
+        payload: prods,
+        totalPages: totalPages,
+        prevPage: page > 1 ? page - 1 : null,
+        nextPage: page < totalPages ? page + 1 : null,
+        page: page,
+        hasPrevPage: page > 1,
+        hasNextPage: page < totalPages,
+        prevLink: page > 1 ? `/products?page=${page - 1}&pageSize=${pageSize}` : null,
+        nextLink: page < totalPages ? `/products?page=${page + 1}&pageSize=${pageSize}` : null
+      }
+  
+      res.json(response)
+    } catch (error) {
+      res.send({ error: error, message: 'Se produjo un error al obtener los productos.' })
     }
-})
+  })
 
 
 router.get('/:pid', async (req, res) => {
