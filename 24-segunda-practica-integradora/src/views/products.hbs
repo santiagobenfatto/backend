@@ -1,0 +1,25 @@
+<div style="display:flex; gap: 5rem;">
+  <div>
+    <h1>Productos</h1>
+    <div id="container">
+      {{#each products}}
+        <div style="border: 1px solid black">
+            <p> Producto:{{this.title}}</p>
+            <p>Descripción: {{this.description}}</p>
+            <p>Precio: {{this.price}}</p>
+            <p>Categoría: {{this.category}}</p>
+            <a href="/api/carts/646d0f37027f8481d30b8e87/products/{{this._id}}" target="_self"><button>Agregar al Carrito</button></a>
+        </div>
+        {{/each}}
+
+        {{#if hasPrevPage}}
+          <a href="/products?page={{prevPage}}&limit=3"><button>Anterior</button></a>
+        {{/if}}
+
+        {{#if hasNextPage}}
+          <a href="/products?page={{nextPage}}&limit=3"><button>Siguiente</button></a>
+        {{/if}}
+    </div>
+  </div>
+</div>
+<script src="/js/index.js"></script>

@@ -1,0 +1,121 @@
+[
+	{
+		"title": "Hamburguesa",
+		"description": "Doble quesito",
+		"code": "543sdasdda",
+		"price": 2900,
+		"status": true,
+		"stock": 40,
+		"category": "Fastfood"
+	},
+	{
+		"title": "Alitas de pollo",
+		"description": "15 piezas",
+		"code": "523a",
+		"price": 1500,
+		"status": true,
+		"stock": 15,
+		"category": "Fastfood"
+	},
+	{
+		"title": "Fried MINI Chicken",
+		"description": "Extra extra large",
+		"code": "543sda",
+		"price": 3000,
+		"status": true,
+		"stock": 47,
+		"category": "Fastfood"
+	},
+	{
+		"title": "Nugget gigantes",
+		"description": "Extra extra large",
+		"code": "543sda",
+		"price": 3000,
+		"stock": 47,
+		"category": "Fastfood",
+		"status": true
+	},
+	{
+		"title": "Pancake",
+		"description": "Kids set",
+		"code": "547sass",
+		"price": 900,
+		"stock": 120,
+		"category": "Cakes",
+		"status": true
+	},
+	{
+		"title": "Pancake big fest",
+		"description": "Adults set",
+		"code": "5478sdsd",
+		"price": 900,
+		"stock": 120,
+		"category": "Cakes",
+		"status": true
+
+	},
+	{
+		"title": "Agua",
+		"description": "450ml",
+		"code": "5478fsdsd",
+		"price": 700,
+		"stock": 120,
+		"category": "Drinks",
+		"status": true
+	},
+	{
+		"title": "Cocacola",
+		"description": "450ml",
+		"code": "fds5t5w",
+		"price": 750,
+		"stock": 100,
+		"category": "Drinks",
+		"status": true
+	},
+	{
+		"title": "Gatorade",
+		"description": "1L",
+		"code": "fds5t5fdw",
+		"price": 1000,
+		"stock": 100,
+		"category": "Drinks",
+		"status": true
+	},
+	{
+		"title": "Jugo Naranja",
+		"description": "1L",
+		"code": "fdsfd35t5fdw",
+		"price": 900,
+		"stock": 100,
+		"category": "Drinks",
+		"status": true
+	},
+	{
+		"title": "Camarones",
+		"description": "A la provenzal",
+		"code": "fds45fdw",
+		"price": 6500,
+		"stock": 100,
+		"category": "Gourmet",
+		"status": true
+	},
+	{
+		"title": "Mollejas",
+		"description": "Al verdeo",
+		"code": "grd5t5fdw",
+		"price": 7000,
+		"stock": 100,
+		"category": "Gourmet",
+		"status": true
+	},
+	{
+		"title": "Cazuela de Mariscos",
+		"description": "Variada",
+		"code": "fd4t5fdw",
+		"price": 9900,
+		"stock": 100,
+		"category": "Gourmet",
+		"status": true
+	}
+
+]
